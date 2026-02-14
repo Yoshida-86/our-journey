@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Glara ❤️</title>
+<title>Happy Valentine Glara ❤️</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -16,158 +15,168 @@
 }
 
 body{
-  font-family:'Poppins', sans-serif;
-  scroll-behavior:smooth;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
   overflow-x:hidden;
   color:white;
+  text-align:center;
 }
 
-section{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:40px;
-  position:relative;
+/* Sparkles */
+.sparkle{
+  position:fixed;
+  font-size:20px;
+  animation:float 6s linear infinite;
+  opacity:0.8;
+}
+
+@keyframes float{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);}
+}
+
+header{
+  padding:60px 20px;
 }
 
 h1{
-  font-family:'Playfair Display', serif;
-  font-size:3rem;
-  margin-bottom:20px;
-  opacity:0;
-  transform:translateY(40px);
-  animation:fadeUp 1.5s forwards;
+  font-family:'Great Vibes',cursive;
+  font-size:4rem;
+  animation:fadeIn 2s ease forwards;
 }
 
-p{
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(0.5);}
+  to{opacity:1; transform:scale(1);}
+}
+
+.section{
+  padding:60px 20px;
+}
+
+.message{
   font-size:1.3rem;
-  opacity:0.9;
+  max-width:700px;
+  margin:20px auto;
 }
 
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+.flowers{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin:30px 0;
 }
 
-/* Background images */
-.page1{
-  background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+.flowers img{
+  width:120px;
+  border-radius:20px;
+  transition:0.4s;
 }
 
-.page2{
-  background:url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d") center/cover no-repeat;
+.flowers img:hover{
+  transform:scale(1.2) rotate(5deg);
 }
 
-.page3{
-  background:url("https://images.unsplash.com/photo-1517817748493-49ec54a32465") center/cover no-repeat;
-}
-
-.page4{
-  background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
-}
-
-.page5{
-  background:linear-gradient(135deg,#1f1c2c,#928dab);
-}
-
-/* Dark overlay */
-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.5);
-}
-
-.content{
-  position:relative;
-  z-index:1;
-  max-width:800px;
-}
-
-/* Final Button */
-button{
-  margin-top:30px;
-  padding:15px 40px;
-  font-size:1.1rem;
+/* Buttons */
+.button{
+  margin:15px;
+  padding:15px 30px;
   border:none;
   border-radius:40px;
   background:white;
-  color:#1f1c2c;
+  color:#ff4d6d;
+  font-weight:bold;
   cursor:pointer;
   transition:0.3s;
 }
 
-button:hover{
+.button:hover{
   transform:scale(1.1);
+}
+
+.reveal{
+  margin-top:20px;
+  font-size:1.2rem;
+  min-height:40px;
+}
+
+/* Final love explosion */
+.explosion{
+  display:none;
+  padding:100px 20px;
+  font-family:'Great Vibes',cursive;
+  font-size:3rem;
 }
 </style>
 </head>
 
 <body>
 
-<section class="page1">
-  <div class="content">
-    <h1>Glara Gyan ❤️</h1>
-    <p>This is not just for Valentine's Day...</p>
-  </div>
-</section>
+<header>
+  <h1>Happy Valentine Glara Gyan ❤️</h1>
+  <p class="message">
+    I love you more than words can explain.
+    This isn’t just for today.
+    It’s for every single day of my life.
+  </p>
+</header>
 
-<section class="page2">
-  <div class="content">
-    <h1>Through hardship</h1>
-    <p>Through days that test us and shape us...</p>
-  </div>
-</section>
+<div class="flowers">
+  <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+  <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946">
+  <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+</div>
 
-<section class="page3">
-  <div class="content">
-    <h1>Through ease</h1>
-    <p>Through laughter, comfort, and soft moments...</p>
-  </div>
-</section>
+<div class="section">
+  <h2>Click to see what I adore about you 💕</h2>
 
-<section class="page4">
-  <div class="content">
-    <h1>Through change</h1>
-    <p>Through distance, growth, dreams and reality...</p>
-  </div>
-</section>
+  <button class="button" onclick="showQuality('Your kindness melts my heart 🥹')">Your Kindness</button>
+  <button class="button" onclick="showQuality('Your smile lights up my entire world ✨')">Your Smile</button>
+  <button class="button" onclick="showQuality('Your strength inspires me every day 💪❤️')">Your Strength</button>
+  <button class="button" onclick="showQuality('Your heart is the safest place I know 💗')">Your Heart</button>
+  <button class="button" onclick="showQuality('Your beauty inside and out leaves me speechless 🌹')">Your Beauty</button>
 
-<section class="page5">
-  <div class="content">
-    <h1>I choose you.</h1>
-    <p>Not just today. Not just this year.  
-    But every single day of my life.</p>
-    <button onclick="final()">Always ❤️</button>
-  </div>
-</section>
+  <div class="reveal" id="reveal"></div>
+</div>
+
+<div class="section">
+  <button class="button" onclick="explodeLove()">Click if you know I will always love you 💖</button>
+</div>
+
+<div class="explosion" id="explosion">
+  I will love you through storms ☔  
+  Through sunshine ☀️  
+  Through hardship and ease 🌊  
+  No matter what life throws at us…  
+  I choose you. Always. ❤️
+</div>
 
 <script>
-function final(){
-  document.body.innerHTML = `
-  <div style="
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:black;
-  color:white;
-  text-align:center;
-  flex-direction:column;
-  padding:40px;">
-  <h1 style="font-family:'Playfair Display',serif;font-size:3rem;">
-  Forever means choosing you, Glara.
-  </h1>
-  <p style="margin-top:20px;font-size:1.3rem;">
-  Through every season.  
-  Through every version of life.  
-  I am yours.
-  </p>
-  </div>`;
+
+/* Sparkles generator */
+function createSparkle(){
+  const sparkle=document.createElement("div");
+  sparkle.className="sparkle";
+  sparkle.innerHTML="✨";
+  sparkle.style.left=Math.random()*100+"vw";
+  sparkle.style.animationDuration=(Math.random()*3+3)+"s";
+  document.body.appendChild(sparkle);
+
+  setTimeout(()=>{sparkle.remove();},6000);
+}
+
+setInterval(createSparkle,300);
+
+/* Reveal qualities */
+function showQuality(text){
+  document.getElementById("reveal").innerHTML=text;
+}
+
+/* Final love explosion */
+function explodeLove(){
+  document.getElementById("explosion").style.display="block";
+  document.body.style.background="linear-gradient(135deg,#ff4d6d,#c9184a)";
 }
 </script>
 
