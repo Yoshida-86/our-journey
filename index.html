@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Journey ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: #111;
+  color: white;
+}
+
+/* Scroll Snap */
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  max-width: 800px;
+  line-height: 1.4;
+  animation: fadeUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Background Gradients */
+.page1 { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+.page2 { background: linear-gradient(135deg, #3a1c71, #d76d77); }
+.page3 { background: linear-gradient(135deg, #42275a, #734b6d); }
+.page4 { background: linear-gradient(135deg, #0f2027, #2c5364); }
+.page5 { background: linear-gradient(135deg, #200122, #6f0000); }
+
+/* Floating Hearts */
+.heart {
+  position: absolute;
+  bottom: -50px;
+  font-size: 20px;
+  animation: float 8s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-110vh); }
+}
+
+/* Final Button */
+.button {
+  margin-top: 40px;
+  padding: 15px 35px;
+  border-radius: 40px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: white;
+  color: #6f0000;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="page1">
+  <div>
+    <h1>Hey my love ❤️</h1>
+    <p>Scroll down… I want to tell you something.</p>
+  </div>
+</section>
+
+<section class="page2">
+  <div>
+    <h1>Through hardship…</h1>
+    <p>Through days that test us, challenge us, shape us.</p>
+  </div>
+</section>
+
+<section class="page3">
+  <div>
+    <h1>Through ease…</h1>
+    <p>Through laughter, comfort, and peaceful nights.</p>
+  </div>
+</section>
+
+<section class="page4">
+  <div>
+    <h1>Through change…</h1>
+    <p>Through growth, distance, dreams, and everything life brings.</p>
+  </div>
+</section>
+
+<section class="page5">
+  <div>
+    <h1>I choose you.</h1>
+    <p>Not just today. Not just on Valentine's.  
+    But every single day.</p>
+    <button class="button" onclick="finalMessage()">Always ❤️</button>
+  </div>
+</section>
+
+</div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 8000);
+}
+
+setInterval(createHeart, 500);
+
+function finalMessage() {
+  document.body.innerHTML = `
+  <div style="
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:black;
+  color:white;
+  text-align:center;
+  flex-direction:column;
+  padding:40px;">
+    <h1 style="font-size:3rem;">Forever means choosing you.</h1>
+    <p style="margin-top:20px;font-size:1.3rem;">
+    Through storms. Through sunshine.  
+    Through every version of life.  
+    I am yours.
+    </p>
+  </div>
+  `;
+}
+</script>
+
+</body>
+</html>
