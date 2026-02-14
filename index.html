@@ -3,188 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Journey ❤️</title>
+<title>For Glara ❤️</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+body{
+  font-family:'Poppins', sans-serif;
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+  color:white;
 }
 
-body {
-  overflow-x: hidden;
-  background: #111;
-  color: white;
+section{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px;
+  position:relative;
 }
 
-/* Scroll Snap */
-.container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+h1{
+  font-family:'Playfair Display', serif;
+  font-size:3rem;
+  margin-bottom:20px;
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1.5s forwards;
 }
 
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-  position: relative;
+p{
+  font-size:1.3rem;
+  opacity:0.9;
 }
 
-h1 {
-  font-size: 3rem;
-  max-width: 800px;
-  line-height: 1.4;
-  animation: fadeUp 1.5s ease forwards;
-  opacity: 0;
-}
-
-p {
-  font-size: 1.3rem;
-  margin-top: 20px;
-  opacity: 0.8;
-}
-
-@keyframes fadeUp {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 }
 
-/* Background Gradients */
-.page1 { background: linear-gradient(135deg, #1a1a2e, #16213e); }
-.page2 { background: linear-gradient(135deg, #3a1c71, #d76d77); }
-.page3 { background: linear-gradient(135deg, #42275a, #734b6d); }
-.page4 { background: linear-gradient(135deg, #0f2027, #2c5364); }
-.page5 { background: linear-gradient(135deg, #200122, #6f0000); }
-
-/* Floating Hearts */
-.heart {
-  position: absolute;
-  bottom: -50px;
-  font-size: 20px;
-  animation: float 8s linear infinite;
-  opacity: 0.6;
+/* Background images */
+.page1{
+  background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
 }
 
-@keyframes float {
-  from { transform: translateY(0); }
-  to { transform: translateY(-110vh); }
+.page2{
+  background:url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d") center/cover no-repeat;
+}
+
+.page3{
+  background:url("https://images.unsplash.com/photo-1517817748493-49ec54a32465") center/cover no-repeat;
+}
+
+.page4{
+  background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
+}
+
+.page5{
+  background:linear-gradient(135deg,#1f1c2c,#928dab);
+}
+
+/* Dark overlay */
+section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+
+.content{
+  position:relative;
+  z-index:1;
+  max-width:800px;
 }
 
 /* Final Button */
-.button {
-  margin-top: 40px;
-  padding: 15px 35px;
-  border-radius: 40px;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  background: white;
-  color: #6f0000;
-  transition: 0.3s;
+button{
+  margin-top:30px;
+  padding:15px 40px;
+  font-size:1.1rem;
+  border:none;
+  border-radius:40px;
+  background:white;
+  color:#1f1c2c;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-.button:hover {
-  transform: scale(1.1);
+button:hover{
+  transform:scale(1.1);
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
 <section class="page1">
-  <div>
-    <h1>Hey my love ❤️</h1>
-    <p>Scroll down… I want to tell you something.</p>
+  <div class="content">
+    <h1>Glara Gyan ❤️</h1>
+    <p>This is not just for Valentine's Day...</p>
   </div>
 </section>
 
 <section class="page2">
-  <div>
-    <h1>Through hardship…</h1>
-    <p>Through days that test us, challenge us, shape us.</p>
+  <div class="content">
+    <h1>Through hardship</h1>
+    <p>Through days that test us and shape us...</p>
   </div>
 </section>
 
 <section class="page3">
-  <div>
-    <h1>Through ease…</h1>
-    <p>Through laughter, comfort, and peaceful nights.</p>
+  <div class="content">
+    <h1>Through ease</h1>
+    <p>Through laughter, comfort, and soft moments...</p>
   </div>
 </section>
 
 <section class="page4">
-  <div>
-    <h1>Through change…</h1>
-    <p>Through growth, distance, dreams, and everything life brings.</p>
+  <div class="content">
+    <h1>Through change</h1>
+    <p>Through distance, growth, dreams and reality...</p>
   </div>
 </section>
 
 <section class="page5">
-  <div>
+  <div class="content">
     <h1>I choose you.</h1>
-    <p>Not just today. Not just on Valentine's.  
-    But every single day.</p>
-    <button class="button" onclick="finalMessage()">Always ❤️</button>
+    <p>Not just today. Not just this year.  
+    But every single day of my life.</p>
+    <button onclick="final()">Always ❤️</button>
   </div>
 </section>
 
-</div>
-
 <script>
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "❤️";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
-  document.body.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 8000);
-}
-
-setInterval(createHeart, 500);
-
-function finalMessage() {
+function final(){
   document.body.innerHTML = `
   <div style="
+  height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
   background:black;
   color:white;
   text-align:center;
   flex-direction:column;
   padding:40px;">
-    <h1 style="font-size:3rem;">Forever means choosing you.</h1>
-    <p style="margin-top:20px;font-size:1.3rem;">
-    Through storms. Through sunshine.  
-    Through every version of life.  
-    I am yours.
-    </p>
-  </div>
-  `;
+  <h1 style="font-family:'Playfair Display',serif;font-size:3rem;">
+  Forever means choosing you, Glara.
+  </h1>
+  <p style="margin-top:20px;font-size:1.3rem;">
+  Through every season.  
+  Through every version of life.  
+  I am yours.
+  </p>
+  </div>`;
 }
 </script>
 
